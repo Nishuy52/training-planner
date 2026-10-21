@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.dev.vars
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+.pytest_cache/
+.vercel/
+.claude/worktrees/

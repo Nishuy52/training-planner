@@ -1,0 +1,604 @@
+{
+ "days": [
+  {
+   "date": "2026-10-26",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "lift",
+     "lift": "squat",
+     "week": 1,
+     "slot": "am",
+     "status": "planned"
+    },
+    {
+     "kind": "run",
+     "run": "benchmark-2k4",
+     "slot": "pm",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "run",
+     "run": "easy",
+     "slot": "am",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "run",
+     "run": "quality-vert",
+     "slot": "am",
+     "status": "planned"
+    }
+   ],
+   "notes": [
+    "Also: Wall A 18:00"
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "lift",
+     "lift": "bench",
+     "week": 1,
+     "slot": "am",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "climb",
+     "eventId": "wall-a-1030",
+     "slot": "pm",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-31",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": false,
+   "noGym": true,
+   "note": "Crag trip",
+   "sessions": [
+    {
+     "kind": "run",
+     "run": "ruck",
+     "slot": "am",
+     "status": "planned"
+    }
+   ],
+   "notes": [
+    "Skipped: Wall A 18:00 (mountain day)"
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": true,
+   "noGym": true,
+   "note": "Climbing course",
+   "sessions": []
+  },
+  {
+   "date": "2026-11-02",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": true,
+   "noGym": true,
+   "note": "Climbing course",
+   "sessions": []
+  },
+  {
+   "date": "2026-11-03",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": true,
+   "noGym": true,
+   "note": "Climbing course",
+   "sessions": []
+  },
+  {
+   "date": "2026-11-04",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": false,
+   "noGym": true,
+   "note": "Crag trip",
+   "sessions": [
+    {
+     "kind": "travel-strength",
+     "slot": "am",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "timezone": "Europe/Rome",
+   "gymProfileId": null,
+   "mountain": false,
+   "noGym": true,
+   "note": "Crag trip",
+   "sessions": []
+  },
+  {
+   "date": "2026-11-06",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": []
+  },
+  {
+   "date": "2026-11-07",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "run",
+     "run": "long",
+     "slot": "am",
+     "status": "planned"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08",
+   "timezone": "Europe/Berlin",
+   "gymProfileId": "home-gym",
+   "mountain": false,
+   "noGym": false,
+   "sessions": [
+    {
+     "kind": "lift",
+     "lift": "squat",
+     "week": "reentry",
+     "slot": "am",
+     "status": "planned"
+    }
+   ]
+  }
+ ],
+ "details": {
+  "2026-10-26": [
+   {
+    "kind": "lift",
+    "lift": "squat",
+    "week": 1,
+    "tm": 80,
+    "gymProfileId": "home-gym",
+    "mainSets": [
+     {
+      "pct": 65,
+      "reps": 5,
+      "amrap": false,
+      "load": 52.5,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 75,
+      "reps": 5,
+      "amrap": false,
+      "load": 60,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 85,
+      "reps": 5,
+      "amrap": true,
+      "load": 67.5,
+      "unit": "kg",
+      "capped": false
+     }
+    ],
+    "warmup": [
+     {
+      "name": "Knee-to-wall dorsiflexion",
+      "dose": "2 × 10/side",
+      "cue": "Kneecap over 2nd toe."
+     },
+     {
+      "name": "Hip CARs",
+      "dose": "5/side",
+      "cue": "Biggest slow circle with the knee."
+     },
+     {
+      "name": "Short-lever Copenhagen",
+      "dose": "20 s/side"
+     },
+     {
+      "name": "Banded clamshell",
+      "dose": "2 × 15",
+      "cue": "Knees track, no forcing."
+     },
+     {
+      "name": "Deep squat hold",
+      "dose": "45 s",
+      "cue": "Kneecaps forward."
+     },
+     {
+      "name": "Banded tib-post inversion",
+      "dose": "2 × 15"
+     }
+    ],
+    "fsl": [
+     {
+      "name": "DB Bulgarian split squat",
+      "dose": "4 × 8/side",
+      "cue": "RPE 7–8. Kneecap forward."
+     }
+    ],
+    "lastFslWeightKg": 20,
+    "finisher": [
+     {
+      "name": "Cossack squat",
+      "dose": "2 × 12–15",
+      "cue": "Kneecap forward."
+     },
+     {
+      "name": "Nordic / hamstring curl",
+      "dose": "2 × 12–15"
+     },
+     {
+      "name": "Side plank with top-leg raise",
+      "dose": "2 × 12–15"
+     }
+    ]
+   },
+   {
+    "kind": "run",
+    "run": "benchmark-2k4",
+    "rx": {
+     "km": 2.4,
+     "vertM": 0,
+     "detail": "2.4 km all-out on the flat Benchmark loop after a 15 min warm-up."
+    },
+    "target": {
+     "km": 15,
+     "vertM": 300,
+     "deload": false
+    },
+    "route": null
+   }
+  ],
+  "2026-10-27": [
+   {
+    "kind": "run",
+    "run": "easy",
+    "rx": {
+     "km": 4.5,
+     "vertM": 0,
+     "detail": ""
+    },
+    "target": {
+     "km": 15,
+     "vertM": 300,
+     "deload": false
+    },
+    "route": {
+     "name": "Lake loop",
+     "km": 3.3,
+     "vertM": 40
+    }
+   }
+  ],
+  "2026-10-28": [
+   {
+    "kind": "run",
+    "run": "quality-vert",
+    "rx": {
+     "km": 4,
+     "vertM": 120,
+     "detail": "Hill repeats: climb hard 2–3 min, jog down"
+    },
+    "target": {
+     "km": 15,
+     "vertM": 300,
+     "deload": false
+    },
+    "route": null
+   }
+  ],
+  "2026-10-29": [
+   {
+    "kind": "lift",
+    "lift": "bench",
+    "week": 1,
+    "tm": 60,
+    "gymProfileId": "home-gym",
+    "mainSets": [
+     {
+      "pct": 65,
+      "reps": 5,
+      "amrap": false,
+      "load": 40,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 75,
+      "reps": 5,
+      "amrap": false,
+      "load": 45,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 85,
+      "reps": 5,
+      "amrap": true,
+      "load": 50,
+      "unit": "kg",
+      "capped": false
+     }
+    ],
+    "warmup": [
+     {
+      "name": "Band pull-apart",
+      "dose": "2 × 15"
+     },
+     {
+      "name": "Band face pull",
+      "dose": "2 × 15"
+     },
+     {
+      "name": "Side-lying shoulder ER",
+      "dose": "2 × 12"
+     },
+     {
+      "name": "Floor pec-minor stretch",
+      "dose": "2 × 30 s"
+     },
+     {
+      "name": "Prone Y-T-W",
+      "dose": "1 × 10"
+     }
+    ],
+    "fsl": [
+     {
+      "name": "1-arm DB bench press",
+      "dose": "4 × 8/side",
+      "cue": "RPE 7–8."
+     },
+     {
+      "name": "Weighted chin-up",
+      "dose": "3 × 5"
+     }
+    ],
+    "lastFslWeightKg": 16,
+    "finisher": [
+     {
+      "name": "Bicep curl",
+      "dose": "2 × 12–15"
+     },
+     {
+      "name": "Lateral raise / reverse fly",
+      "dose": "2 × 12–15"
+     }
+    ]
+   }
+  ],
+  "2026-10-30": [
+   {
+    "kind": "climb",
+    "event": {
+     "id": "wall-a-1030",
+     "date": "2026-10-30",
+     "time": "18:00",
+     "title": "Friday climbing",
+     "venue": "Wall A",
+     "type": "partner"
+    },
+    "fallback": false,
+    "finisher": "Last 30 min: back-to-back route laps (continuous laps, progressing to 4×4s on routes)."
+   }
+  ],
+  "2026-10-31": [
+   {
+    "kind": "run",
+    "run": "ruck",
+    "rx": {
+     "km": 7,
+     "vertM": 180,
+     "detail": ""
+    },
+    "target": {
+     "km": 15,
+     "vertM": 300,
+     "deload": false
+    },
+    "route": {
+     "name": "Hill repeat",
+     "km": 7.2,
+     "vertM": 610
+    },
+    "ruckLoad": {
+     "packKg": 10,
+     "vertM": 600
+    }
+   }
+  ],
+  "2026-11-01": [],
+  "2026-11-02": [],
+  "2026-11-03": [],
+  "2026-11-04": [
+   {
+    "kind": "travel-strength",
+    "exercises": [
+     {
+      "name": "Bulgarian split squat (bodyweight)",
+      "dose": "3 × 12/side",
+      "cue": "Kneecap forward."
+     },
+     {
+      "name": "Pistol progression",
+      "dose": "3 × 5/side"
+     },
+     {
+      "name": "Single-leg RDL",
+      "dose": "3 × 10/side"
+     },
+     {
+      "name": "Push-up variation",
+      "dose": "3 × max−2"
+     },
+     {
+      "name": "Pull-ups",
+      "dose": "3 × max−2",
+      "cue": "If a bar exists."
+     },
+     {
+      "name": "Side plank",
+      "dose": "2 × 45 s/side"
+     }
+    ]
+   }
+  ],
+  "2026-11-05": [],
+  "2026-11-06": [],
+  "2026-11-07": [
+   {
+    "kind": "run",
+    "run": "long",
+    "rx": {
+     "km": 7.5,
+     "vertM": 200,
+     "detail": ""
+    },
+    "target": {
+     "km": 16.5,
+     "vertM": 330,
+     "deload": false
+    },
+    "route": null
+   }
+  ],
+  "2026-11-08": [
+   {
+    "kind": "lift",
+    "lift": "squat",
+    "week": "reentry",
+    "tm": 80,
+    "gymProfileId": "home-gym",
+    "mainSets": [
+     {
+      "pct": 40,
+      "reps": 5,
+      "amrap": false,
+      "load": 32.5,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 50,
+      "reps": 5,
+      "amrap": false,
+      "load": 40,
+      "unit": "kg",
+      "capped": false
+     },
+     {
+      "pct": 60,
+      "reps": 5,
+      "amrap": false,
+      "load": 47.5,
+      "unit": "kg",
+      "capped": false
+     }
+    ],
+    "warmup": [
+     {
+      "name": "Knee-to-wall dorsiflexion",
+      "dose": "2 × 10/side",
+      "cue": "Kneecap over 2nd toe."
+     },
+     {
+      "name": "Hip CARs",
+      "dose": "5/side",
+      "cue": "Biggest slow circle with the knee."
+     },
+     {
+      "name": "Short-lever Copenhagen",
+      "dose": "20 s/side"
+     },
+     {
+      "name": "Banded clamshell",
+      "dose": "2 × 15",
+      "cue": "Knees track, no forcing."
+     },
+     {
+      "name": "Deep squat hold",
+      "dose": "45 s",
+      "cue": "Kneecaps forward."
+     },
+     {
+      "name": "Banded tib-post inversion",
+      "dose": "2 × 15"
+     }
+    ],
+    "fsl": [
+     {
+      "name": "DB Bulgarian split squat",
+      "dose": "4 × 8/side",
+      "cue": "RPE 7–8. Kneecap forward."
+     }
+    ],
+    "lastFslWeightKg": 20,
+    "finisher": [
+     {
+      "name": "Cossack squat",
+      "dose": "2 × 12–15",
+      "cue": "Kneecap forward."
+     },
+     {
+      "name": "Nordic / hamstring curl",
+      "dose": "2 × 12–15"
+     },
+     {
+      "name": "Copenhagen plank",
+      "dose": "2 × 12–15"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,86 @@
+{
+  "alignmentRule": "Kneecap forward first and the foot follows. Tripod foot (big-toe base, little-toe base, heel). A 10–15° toe-out is normal.",
+  "dailyRoutine": [
+    { "name": "Short foot", "group": "Standing at wall", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": true }, "cue": "Arch up, toes long, big-toe base stays down." },
+    { "name": "Big toe press", "group": "Standing at wall", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": true }, "cue": "Press the big toe down with the other four toes lifted." },
+    { "name": "Wall tibialis raise", "group": "Standing at wall", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": false }, "cue": "Both feet. Heels down, kneecaps forward, lift the forefoot." },
+    { "name": "Wall calf stretch", "group": "Standing at wall", "dose": { "type": "hold", "seconds": 45, "perSide": true, "positions": ["straight knee", "bent knee"] }, "cue": "(a) straight knee for the calf, (b) bent knee for soleus and Achilles." },
+    { "name": "Standing outer hip stretch", "group": "Standing at wall", "dose": { "type": "hold", "seconds": 45, "perSide": true }, "cue": "Leg crossed behind, push the hip out, arm over the top." },
+    { "name": "Chin tucks", "group": "Standing at wall", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": false }, "cue": "Back of the head to the wall, make a double chin, hold 3 s." },
+    { "name": "Neck stretch", "group": "Standing at wall", "dose": { "type": "hold", "seconds": 45, "perSide": true, "positions": ["ear to shoulder", "nose to armpit"] }, "cue": "(a) ear to shoulder, (b) nose to armpit. Gentle, no pulling." },
+    { "name": "Bed chest stretch", "group": "Kneeling at bed", "dose": { "type": "hold", "seconds": 45, "perSide": true }, "cue": "Forearm on the bed, elbow at shoulder height, rotate away." },
+    { "name": "Kneeling thoracic extension", "group": "Kneeling at bed", "dose": { "type": "hold", "seconds": 45, "perSide": false, "times": 2 }, "cue": "Elbows on the bed edge, hips back, lower back flat. Let the upper back sink." },
+    { "name": "Half-kneeling hip flexor", "group": "Kneeling at bed", "dose": { "type": "hold", "seconds": 45, "perSide": true }, "cue": "Squeeze the glute of the back leg, tuck the pelvis, shift forward a little." },
+    { "name": "Thread the needle", "group": "Kneeling at bed", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": true }, "cue": "On all fours, slide one arm under the body, pause, then open up to the ceiling." },
+    { "name": "90/90 switches", "group": "Floor", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": true }, "cue": "Lead with the back knee. Knees track, no forcing." },
+    { "name": "Side-lying hip internal rotation", "group": "Floor", "dose": { "type": "reps", "reps": 10, "pauseS": 3, "perSide": true }, "cue": "Knees together, the top foot lifts." },
+    { "name": "Knee-to-opposite-shoulder", "group": "Floor", "dose": { "type": "hold", "seconds": 45, "perSide": true }, "cue": "On your back, draw the knee toward the opposite shoulder." },
+    { "name": "Hand-assisted hamstring", "group": "Floor", "dose": { "type": "hold", "seconds": 45, "perSide": true, "positions": ["kneecap to ceiling", "across the body", "leg turned in"] }, "cue": "(a) kneecap to ceiling, (b) across the body with hips flat, (c) leg turned in." }
+  ],
+  "morningDrills": [
+    { "name": "Seated hip CARs", "dose": "5/side" },
+    { "name": "Frog hip internal rotation", "dose": "6/side" },
+    { "name": "Standing hip circles", "dose": "5/direction/leg" }
+  ],
+  "morningDrillsNote": "Do 1 set of each, building to 3.",
+  "selfChecks": [
+    { "name": "Shin rotation check", "how": "Seated on a high chair, compare foot angles." },
+    { "name": "Ober test", "how": "Both sides." }
+  ],
+  "warmups": {
+    "squat": [
+      { "name": "Knee-to-wall dorsiflexion", "dose": "2 × 10/side", "cue": "Kneecap over 2nd toe." },
+      { "name": "Hip CARs", "dose": "5/side", "cue": "Biggest slow circle with the knee." },
+      { "name": "Short-lever Copenhagen", "dose": "20 s/side" },
+      { "name": "Banded clamshell", "dose": "2 × 15", "cue": "Knees track, no forcing." },
+      { "name": "Deep squat hold", "dose": "45 s", "cue": "Kneecaps forward." },
+      { "name": "Banded tib-post inversion", "dose": "2 × 15" }
+    ],
+    "deadlift": [
+      { "name": "Inchworm with hip-flexor pause", "dose": "× 5" },
+      { "name": "90/90 transitions", "dose": "10/side", "cue": "Knees track, no forcing." },
+      { "name": "90/90 internal-rotation lift", "dose": "10/side" },
+      { "name": "Paused glute bridge", "dose": "2 × 10" },
+      { "name": "Ankle circle + calf raise", "dose": "10/side" },
+      { "name": "Banded tib-post inversion", "dose": "2 × 15" }
+    ],
+    "bench": [
+      { "name": "Band pull-apart", "dose": "2 × 15" },
+      { "name": "Band face pull", "dose": "2 × 15" },
+      { "name": "Side-lying shoulder ER", "dose": "2 × 12" },
+      { "name": "Floor pec-minor stretch", "dose": "2 × 30 s" },
+      { "name": "Prone Y-T-W", "dose": "1 × 10" }
+    ],
+    "ohp": [
+      { "name": "Foam-roller thoracic extension", "dose": "8–10" },
+      { "name": "Prone Y-T-W", "dose": "2 × 8" },
+      { "name": "Band dislocates", "dose": "10" },
+      { "name": "Thread the needle", "dose": "2 × 8/side" },
+      { "name": "Side-lying 90/90 ER", "dose": "2 × 12" },
+      { "name": "Wall slides", "dose": "10" }
+    ]
+  },
+  "fsl": {
+    "squat": [{ "name": "DB Bulgarian split squat", "dose": "4 × 8/side", "cue": "RPE 7–8. Kneecap forward." }],
+    "bench": [{ "name": "1-arm DB bench press", "dose": "4 × 8/side", "cue": "RPE 7–8." }, { "name": "Weighted chin-up", "dose": "3 × 5" }],
+    "deadlift": [{ "name": "DB single-leg RDL", "dose": "4 × 8/side", "cue": "RPE 7–8. Stance kneecap forward." }],
+    "ohp": [{ "name": "Half-kneeling 1-arm DB press", "dose": "4 × 8/side", "cue": "RPE 7–8." }, { "name": "1-arm DB row", "dose": "3 × 8" }]
+  },
+  "finishers": {
+    "lower": [
+      [{ "name": "Cossack squat", "dose": "2 × 12–15", "cue": "Kneecap forward." }, { "name": "Nordic / hamstring curl", "dose": "2 × 12–15" }, { "name": "Side plank with top-leg raise", "dose": "2 × 12–15" }],
+      [{ "name": "Cossack squat", "dose": "2 × 12–15", "cue": "Kneecap forward." }, { "name": "Nordic / hamstring curl", "dose": "2 × 12–15" }, { "name": "Copenhagen plank", "dose": "2 × 12–15" }]
+    ],
+    "upper": [
+      [{ "name": "Bicep curl", "dose": "2 × 12–15" }, { "name": "Lateral raise / reverse fly", "dose": "2 × 12–15" }]
+    ]
+  },
+  "travelStrength": [
+    { "name": "Bulgarian split squat (bodyweight)", "dose": "3 × 12/side", "cue": "Kneecap forward." },
+    { "name": "Pistol progression", "dose": "3 × 5/side" },
+    { "name": "Single-leg RDL", "dose": "3 × 10/side" },
+    { "name": "Push-up variation", "dose": "3 × max−2" },
+    { "name": "Pull-ups", "dose": "3 × max−2", "cue": "If a bar exists." },
+    { "name": "Side plank", "dose": "2 × 45 s/side" }
+  ]
+}

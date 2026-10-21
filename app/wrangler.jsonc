@@ -1,0 +1,34 @@
+{
+  "name": "training",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-15",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*", "/telegram/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "training", "database_id": "REPLACE_AFTER_d1_create", "migrations_dir": "migrations" }],
+  "triggers": { "crons": ["*/5 * * * *"] },
+  // ADR 0004: the one Live Session lives in a SQLite-backed Durable Object defined here.
+  "durable_objects": { "bindings": [{ "name": "LIVE", "class_name": "LiveSessionObject" }] },
+  "migrations": [{ "tag": "v1-live-session", "new_sqlite_classes": ["LiveSessionObject"] }],
+  // Cloudflare Access (src/http/auth.ts). Left empty, /api/* is open on localhost only (wrangler dev) and
+  // answers 403 on every deployed hostname. Fill both (scripts/deploy-wizard.sh does), then redeploy.
+  // ACCESS_TEAM_DOMAIN is the bare host, e.g. "yourteam.cloudflareaccess.com"; ACCESS_AUD is the POLICY_AUD tag.
+  "vars": { "ROLE": "app", "ACCESS_TEAM_DOMAIN": "", "ACCESS_AUD": "" },
+  "env": {
+    // ADR 0003: same code, second Worker. Serves only POST /telegram/webhook; no cron.
+    // Deploy with: wrangler deploy --env bot. Non-inheritable keys (d1, vars, assets) are repeated or omitted on purpose.
+    "bot": {
+      "name": "training-bot",
+      "main": "src/index.ts",
+      // assets are inherited and cannot be dropped per env: run the Worker first for every path so ROLE gating 404s all of it.
+      "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+      "d1_databases": [{ "binding": "DB", "database_name": "training", "database_id": "REPLACE_AFTER_d1_create", "migrations_dir": "migrations" }],
+      "triggers": { "crons": [] },
+      // ADR 0004: the bot reaches the app Worker's Live Session object; it defines no class of its own
+      // (migrations are inherited, so they are emptied here).
+      "durable_objects": { "bindings": [{ "name": "LIVE", "class_name": "LiveSessionObject", "script_name": "training" }] },
+      "migrations": [],
+      "vars": { "ROLE": "bot", "ACCESS_TEAM_DOMAIN": "", "ACCESS_AUD": "" }
+    }
+  }
+  // secrets (wrangler secret put, per Worker; bot needs --env bot): TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_WEBHOOK_SECRET
+  // app Worker only (optional, turns on the intervals.icu sync): INTERVALS_API_KEY
+}

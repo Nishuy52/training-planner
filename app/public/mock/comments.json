@@ -1,0 +1,30 @@
+{
+  "comments": [
+    {
+      "id": "cm-seed-shoulder",
+      "date": "2026-10-28",
+      "text": "Shoulder felt tight, go lighter on OHP.",
+      "status": "open",
+      "createdAt": "2026-10-24T07:40:00.000Z",
+      "updatedAt": "2026-10-24T07:40:00.000Z"
+    },
+    {
+      "id": "cm-seed-travel",
+      "date": "2026-11-04",
+      "text": "Rest day after the course. Fine to drop the Travel Strength if the legs are tired.",
+      "status": "open",
+      "createdAt": "2026-10-24T07:45:00.000Z",
+      "updatedAt": "2026-10-24T07:45:00.000Z"
+    },
+    {
+      "id": "cm-seed-gym",
+      "date": "2026-10-26",
+      "session": { "key": "lift:squat", "label": "Squat — Week 1 (5s)" },
+      "text": "Gym closes at 20:00 on Mondays.",
+      "status": "addressed",
+      "resolution": "Squat kept in the AM slot.",
+      "createdAt": "2026-10-22T18:00:00.000Z",
+      "updatedAt": "2026-10-23T06:00:00.000Z"
+    }
+  ]
+}

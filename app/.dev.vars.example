@@ -1,0 +1,14 @@
+# Local secrets for `wrangler dev`. Copy to app/.dev.vars (gitignored) and fill in what you need.
+# None of these are required to open the tracker locally: on localhost the API runs without
+# Cloudflare Access, and the reminder cron does not fire under `wrangler dev`.
+# In production these are Worker secrets (`npx wrangler secret put NAME --env=""`, and again
+# with `--env bot` for the bot Worker), never vars in wrangler.jsonc.
+
+# Telegram bot token from @BotFather (both Workers).
+TELEGRAM_BOT_TOKEN=123456789:replace-with-your-bot-token
+# Your private chat ID with the bot (both Workers). The bot ignores every other chat.
+TELEGRAM_CHAT_ID=123456789
+# Random string sent by Telegram in X-Telegram-Bot-Api-Secret-Token (bot Worker).
+TELEGRAM_WEBHOOK_SECRET=replace-with-a-long-random-hex-string
+# Optional, app Worker only: intervals.icu API key. Leave empty to keep the Activity sync off.
+INTERVALS_API_KEY=

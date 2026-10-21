@@ -1,0 +1,40 @@
+{
+  "tmHistory": [
+    { "date": "2026-10-19", "lift": "squat", "tm": 80, "reason": "test" },
+    { "date": "2026-10-20", "lift": "bench", "tm": 60, "reason": "test" },
+    { "date": "2026-10-21", "lift": "deadlift", "tm": 100, "reason": "test" },
+    { "date": "2026-10-22", "lift": "ohp", "tm": 40, "reason": "test" },
+    { "date": "2026-11-18", "lift": "squat", "tm": 85, "reason": "cycle" },
+    { "date": "2026-11-19", "lift": "bench", "tm": 62.5, "reason": "cycle" },
+    { "date": "2026-11-23", "lift": "deadlift", "tm": 105, "reason": "cycle" },
+    { "date": "2026-11-24", "lift": "ohp", "tm": 40, "reason": "manual" }
+  ],
+  "benchmarks": [
+    { "id": 5, "date": "2026-10-27", "kind": "hill", "timeS": 1800 },
+    { "id": 6, "date": "2026-11-10", "kind": "2k4", "timeS": 720 },
+    { "id": 1, "date": "2026-11-17", "kind": "2k4", "timeS": 690 },
+    { "id": 2, "date": "2026-11-19", "kind": "autobelay", "eventId": "wall-c-bm", "grade": "6a+", "minutes": 15 },
+    { "id": 3, "date": "2026-11-24", "kind": "hill", "timeS": 1740, "auto": true },
+    { "id": 4, "date": "2026-12-01", "kind": "2k4" }
+  ],
+  "weeklyRuns": [
+    { "monday": "2026-10-12", "km": 3, "vertM": 100, "targetKm": null, "targetVertM": null, "deload": false },
+    { "monday": "2026-10-19", "km": 0, "vertM": 0, "targetKm": null, "targetVertM": null, "deload": false },
+    { "monday": "2026-10-26", "km": 14, "vertM": 300, "targetKm": 15, "targetVertM": 300, "deload": false },
+    { "monday": "2026-11-02", "km": 16, "vertM": 600, "targetKm": 16.5, "targetVertM": 330, "deload": false },
+    { "monday": "2026-11-09", "km": 15, "vertM": 300, "targetKm": 18, "targetVertM": 360, "deload": false },
+    { "monday": "2026-11-16", "km": 13, "vertM": 250, "targetKm": 12.5, "targetVertM": 250, "deload": true },
+    { "monday": "2026-11-23", "km": 10, "vertM": 150, "targetKm": 20, "targetVertM": 400, "deload": false },
+    { "monday": "2026-11-30", "km": 4, "vertM": 50, "targetKm": 22, "targetVertM": 440, "deload": false }
+  ],
+  "adherence": [
+    { "monday": "2026-10-12", "expected": 0, "done": 0, "skipped": 0, "byKind": { "lift": { "expected": 0, "done": 0, "skipped": 0 }, "run": { "expected": 0, "done": 0, "skipped": 0 }, "climb": { "expected": 0, "done": 0, "skipped": 0 } } },
+    { "monday": "2026-10-19", "expected": 3, "done": 2, "skipped": 0, "byKind": { "lift": { "expected": 2, "done": 2, "skipped": 0 }, "run": { "expected": 0, "done": 0, "skipped": 0 }, "climb": { "expected": 1, "done": 0, "skipped": 0 } } },
+    { "monday": "2026-10-26", "expected": 7, "done": 6, "skipped": 1, "byKind": { "lift": { "expected": 3, "done": 3, "skipped": 0 }, "run": { "expected": 3, "done": 2, "skipped": 1 }, "climb": { "expected": 1, "done": 1, "skipped": 0 } } },
+    { "monday": "2026-11-02", "expected": 5, "done": 5, "skipped": 0, "byKind": { "lift": { "expected": 2, "done": 2, "skipped": 0 }, "run": { "expected": 2, "done": 2, "skipped": 0 }, "climb": { "expected": 1, "done": 1, "skipped": 0 } } },
+    { "monday": "2026-11-09", "expected": 8, "done": 5, "skipped": 1, "byKind": { "lift": { "expected": 3, "done": 1, "skipped": 1 }, "run": { "expected": 3, "done": 3, "skipped": 0 }, "climb": { "expected": 2, "done": 1, "skipped": 0 } } },
+    { "monday": "2026-11-16", "expected": 7, "done": 7, "skipped": 0, "byKind": { "lift": { "expected": 3, "done": 3, "skipped": 0 }, "run": { "expected": 3, "done": 3, "skipped": 0 }, "climb": { "expected": 1, "done": 1, "skipped": 0 } } },
+    { "monday": "2026-11-23", "expected": 4, "done": 2, "skipped": 0, "byKind": { "lift": { "expected": 1, "done": 1, "skipped": 0 }, "run": { "expected": 2, "done": 1, "skipped": 0 }, "climb": { "expected": 1, "done": 0, "skipped": 0 } } },
+    { "monday": "2026-11-30", "expected": 2, "done": 1, "skipped": 0, "byKind": { "lift": { "expected": 1, "done": 1, "skipped": 0 }, "run": { "expected": 1, "done": 0, "skipped": 0 }, "climb": { "expected": 0, "done": 0, "skipped": 0 } } }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "tms": { "squat": 80, "bench": 60, "deadlift": 100, "ohp": 40 },
+  "lift": { "week": 1, "index": 0, "phase": { "kind": "normal" } },
+  "lastLiftDate": "2026-10-25",
+  "run": { "nextQuality": "vert", "nextBenchmark": "2k4", "runStartMonday": "2026-10-26" },
+  "ruck": { "lastCredit": "2026-10-06", "step": 0 },
+  "rucksEnabled": false,
+  "homeLocation": "Hometown",
+  "lastClimbDate": "2026-10-23",
+  "runsThisWeek": {},
+  "doneByDate": {},
+  "defaultWeek": {
+    "0": { "am": "lift" },
+    "1": { "am": "run" },
+    "2": { "am": "run" },
+    "3": { "am": "lift" },
+    "4": {},
+    "5": { "am": "run-long" },
+    "6": { "am": "lift" }
+  },
+  "gymProfiles": [
+    { "id": "home-gym", "name": "Home Gym", "plateStepKg": 2.5, "machineLifts": [], "hasBands": true },
+    { "id": "travel-gym", "name": "Travel gym", "plateStepKg": 2.5, "machineLifts": ["bench", "ohp"], "machineStepLb": 10, "machineMaxLb": 200, "hasBands": false }
+  ],
+  "defaultGymProfileId": "home-gym",
+  "defaultTimezone": "Europe/Berlin",
+  "constraints": [
+    { "id": "crag-trip", "start": "2026-10-31", "end": "2026-11-05", "timezone": "Europe/Rome", "gymProfileId": null, "noGym": true, "note": "Crag trip" },
+    { "id": "climbing-course", "start": "2026-11-01", "end": "2026-11-03", "mountain": true, "note": "Climbing course" }
+  ],
+  "clubEvents": [
+    { "id": "wall-a-1030", "date": "2026-10-30", "time": "18:00", "title": "Friday climbing", "venue": "Wall A", "type": "partner" },
+    { "id": "wall-c-1116", "date": "2026-11-16", "time": "17:00", "title": "Auto-belay endurance", "venue": "Wall C", "type": "endurance_benchmark" }
+  ],
+  "amrapLog": { "squat": {}, "bench": {}, "deadlift": {}, "ohp": {} }
+}

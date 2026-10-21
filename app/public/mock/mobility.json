@@ -1,0 +1,32 @@
+{
+  "log": [
+    { "date": "2026-09-28", "status": "done" },
+    { "date": "2026-09-29", "status": "done" },
+    { "date": "2026-09-30", "status": "skipped" },
+    { "date": "2026-10-01", "status": "done" },
+    { "date": "2026-10-02", "status": "done" },
+    { "date": "2026-10-03", "status": "done" },
+    { "date": "2026-10-05", "status": "done" },
+    { "date": "2026-10-06", "status": "done" },
+    { "date": "2026-10-07", "status": "done" },
+    { "date": "2026-10-08", "status": "skipped" },
+    { "date": "2026-10-09", "status": "done" },
+    { "date": "2026-10-10", "status": "done" },
+    { "date": "2026-10-11", "status": "done" },
+    { "date": "2026-10-12", "status": "done" },
+    { "date": "2026-10-13", "status": "done" },
+    { "date": "2026-10-15", "status": "done" },
+    { "date": "2026-10-16", "status": "done" },
+    { "date": "2026-10-17", "status": "done" },
+    { "date": "2026-10-18", "status": "done" },
+    { "date": "2026-10-19", "status": "skipped" },
+    { "date": "2026-10-20", "status": "done" },
+    { "date": "2026-10-21", "status": "done" },
+    { "date": "2026-10-22", "status": "done" },
+    { "date": "2026-10-23", "status": "done" },
+    { "date": "2026-10-24", "status": "done" },
+    { "date": "2026-10-25", "status": "done" }
+  ],
+  "streak": 6,
+  "selfChecks": { "Ober test": "2026-10-05" }
+}

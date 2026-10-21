@@ -1,0 +1,4 @@
+{ "version": "0.0.1", "configurations": [
+  { "name": "training-app", "runtimeExecutable": "npm", "runtimeArgs": ["--prefix", "app", "run", "dev"], "port": 8787 },
+  { "name": "training-ui-check", "runtimeExecutable": "npx", "runtimeArgs": ["--prefix", "app", "wrangler", "dev", "--config", "app/wrangler.jsonc", "--env=", "--port", "8795", "--persist-to", "app/.wrangler/ui-check"], "port": 8795 }
+] }
