@@ -29,7 +29,7 @@ bash app/scripts/deploy-wizard.sh          # macOS / Linux / Git Bash
 
 On Windows from PowerShell: `& "C:\Program Files\Git\bin\bash.exe" app/scripts/deploy-wizard.sh`.
 
-The wizard runs from `app/` wherever you start it, and walks through eight stages:
+The wizard runs from `app/` wherever you start it, and walks through nine stages:
 
 1. `wrangler login`, then shows `wrangler whoami` so you can check the account.
 2. Creates the `training` D1 database (or reuses it), writes its id into both `REPLACE_AFTER_d1_create` placeholders in `app/wrangler.jsonc`, and applies the migrations remotely.
@@ -38,13 +38,14 @@ The wizard runs from `app/` wherever you start it, and walks through eight stage
 5. Finds your chat ID from the message you send the bot (`getUpdates`) and stores it as `TELEGRAM_CHAT_ID` on both Workers.
 6. Generates a webhook secret, stores it as `TELEGRAM_WEBHOOK_SECRET` on the bot Worker, and calls `setWebhook`.
 7. Walks you through enabling Cloudflare Access on the `training` Worker, writes `ACCESS_AUD` and `ACCESS_TEAM_DOMAIN` into `wrangler.jsonc`, and redeploys.
-8. Smoke test: open the tracker, sign in, and send `/today` to the bot.
+8. Asks for your intervals.icu API key, checks it against `GET /api/v1/athlete/0`, and stores it as `INTERVALS_API_KEY` on the `training` Worker only. You can skip this stage; it then shows in the closing "still to do" list.
+9. Smoke test: open the tracker, sign in, press **Sync now** (Progress › Recent Activities), and send `/today` to the bot.
 
 Secrets go straight to Cloudflare through `wrangler secret put`. They are never written to disk. Non-secret values (D1 id, URLs, bot username, chat ID, Access values) are saved in `app/.env.deploy` so that a re-run offers them as defaults. That file is gitignored by the root `.env.*` rule. Re-running the wizard is safe.
 
 The wizard edits `app/wrangler.jsonc` (D1 id and Access vars). Those values identify your account, so think twice before you commit them to a public fork.
 
-The wizard does not set up the optional intervals.icu sync. See [Optional: intervals.icu sync](#optional-intervalsicu-sync).
+To add or replace the intervals.icu key after the wizard, see [intervals.icu sync](#optional-intervalsicu-sync). Connect your watch's own service (Garmin Connect, Coros, Suunto, Polar…) to intervals.icu, not Strava: Strava-imported Activities are not available to other apps through the intervals.icu API.
 
 ## Option B: by hand
 

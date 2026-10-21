@@ -57,6 +57,8 @@ Other features:
 
 ## Setup
 
+**New to this? Follow [docs/getting-started.md](docs/getting-started.md)**, a step-by-step guide for non-programmers that ends with the tracker, the Telegram bot and watch sync all working.
+
 You need Node.js 22+, a Cloudflare account (Free plan), a Telegram account and bash (Git Bash on Windows).
 
 ```bash
@@ -64,7 +66,7 @@ cd app && npm install && cd ..
 bash app/scripts/deploy-wizard.sh
 ```
 
-The wizard handles the whole first deploy: Wrangler login, the D1 database and migrations, both Workers, a BotFather bot with its token, chat ID and webhook, and Cloudflare Access.
+The wizard handles the whole first deploy: Wrangler login, the D1 database and migrations, both Workers, a BotFather bot with its token, chat ID and webhook, Cloudflare Access, and the intervals.icu API key.
 
 **[docs/setup.md](docs/setup.md)** has the full guide: what the wizard does, the manual equivalent step by step, Access, the optional intervals.icu sync and service token, and local development.
 

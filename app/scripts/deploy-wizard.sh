@@ -209,7 +209,7 @@ put_secret() {
   printf '  %s✓ secret%s %s %s\n' "$GREEN" "$RESET" "$name" "${*:-(training)}"
 }
 
-TOTAL_STAGES=8
+TOTAL_STAGES=9
 
 banner "Training app: deploy to Cloudflare + Telegram"
 
@@ -227,7 +227,8 @@ say "Creating a D1 database called 'training' (skipped if it already exists)."
 $WR d1 create training >/dev/null 2>&1 || note "(already exists, reusing it)"
 D1_ID=$($WR d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const db=JSON.parse(s).find(d=>d.name==="training");process.stdout.write(db?db.uuid:"")})')
 [[ -n "$D1_ID" ]] || { warn "couldn't find the 'training' database"; exit 1; }
-sed -i "s/REPLACE_AFTER_d1_create/$D1_ID/g" wrangler.jsonc
+# node, not `sed -i`: BSD sed on macOS reads -i's next argument as a backup suffix.
+node -e 'const fs=require("fs"),p="wrangler.jsonc";fs.writeFileSync(p,fs.readFileSync(p,"utf8").split("REPLACE_AFTER_d1_create").join(process.argv[1]))' "$D1_ID"
 write_env D1_ID "$D1_ID"
 say "Applying the schema. Wrangler asks you to confirm; answer y."
 $WR d1 migrations apply training --remote
@@ -271,8 +272,10 @@ put_secret TELEGRAM_BOT_TOKEN "$TG_TOKEN" --env bot
 stage "Your Telegram chat ID"
 say "The app only ever talks to your own chat. Reading it from your 'hi' message."
 get_chat_id() {
-  curl -fsS "https://api.telegram.org/bot${TG_TOKEN}/getUpdates" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const u=(JSON.parse(s).result||[]).reverse().find(x=>x.message&&x.message.chat&&x.message.chat.type==="private");process.stdout.write(u?String(u.message.chat.id):"")})'
+  { curl -fsS "https://api.telegram.org/bot${TG_TOKEN}/getUpdates" || echo '{}'; } | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const u=(JSON.parse(s).result||[]).reverse().find(x=>x.message&&x.message.chat&&x.message.chat.type==="private");process.stdout.write(u?String(u.message.chat.id):"")})'
 }
+# getUpdates answers 409 while a webhook is set (a re-run); stage 6 sets it again.
+curl -fsS "https://api.telegram.org/bot${TG_TOKEN}/deleteWebhook" >/dev/null || true
 CHAT_ID=$(get_chat_id)
 while [[ -z "$CHAT_ID" ]]; do
   open_url "https://t.me/${BOT_USERNAME}"
@@ -317,10 +320,42 @@ say "Redeploying the tracker with the Access settings."
 $WR deploy --env="" >/dev/null && note "Redeployed."
 
 # ── 8 ─────────────────────────────────────────────────────────────────────
+stage "Connect your watch (intervals.icu)"
+say "intervals.icu (free) collects your watch Activities; the app reads them with your personal API key."
+open_url "https://intervals.icu"
+step "Sign up or log in at intervals.icu."
+step "Settings → Connections: connect your watch's own service (Garmin Connect, Coros, Suunto, Polar, Wahoo…)."
+note "Strava-imported Activities are not passed on to other apps, so connect the watch service directly."
+step "Settings → Developer Settings → API key: generate one and copy it."
+ICU_OK=""
+while [[ -z "$ICU_OK" ]]; do
+  ask_secret ICU_KEY "Paste the intervals.icu API key (hidden, Enter to skip):"
+  if [[ -z "$ICU_KEY" ]]; then
+    confirm "Skip intervals.icu? Watch Activities won't be credited until you add it." && break
+    continue
+  fi
+  # The key goes to curl on stdin (-K -), never in its argv.
+  CODE=$(printf 'user = "API_KEY:%s"\n' "$ICU_KEY" | curl -sS -K - -o /dev/null -w '%{http_code}' "https://intervals.icu/api/v1/athlete/0" || true)
+  case "$CODE" in
+    200) ICU_OK=1 ;;
+    401|403) warn "intervals.icu rejected that key." ;;
+    *) warn "Couldn't reach intervals.icu (HTTP ${CODE:-none}). Check your internet connection and try again." ;;
+  esac
+done
+if [[ -n "$ICU_OK" ]]; then
+  note "Key works."
+  put_secret INTERVALS_API_KEY "$ICU_KEY"   # app Worker only: the bot never syncs
+else
+  SKIPPED+=("intervals.icu: npx wrangler secret put INTERVALS_API_KEY --env=\"\"")
+fi
+unset ICU_KEY
+
+# ── 9 ─────────────────────────────────────────────────────────────────────
 stage "Smoke test"
 open_url "$APP_URL"
 step "The tracker asks for your email, then a one-time code. Sign in."
 step "Today tab loads with no red banner. More › Test Week → start a Test Week, or enter your TM Test results."
+[[ -n "$ICU_OK" ]] && step "Progress › Recent Activities → Sync now. Your recent watch Activities appear in the list."
 pause "Tracker OK? Press Enter."
 open_url "https://t.me/${BOT_USERNAME}"
 step "Send /today to the bot. It should answer with today's plan and buttons."
